@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JK‘s Assignment</title>
+<body onkeydown="window.alert()">
+</body>
+<img id='img'src="https://images.theconversation.com/files/175523/original/file-20170626-4492-mqyzj3.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" width="60px" height="50px" onmouseover="document.getElementById('img').src='https://www.hopkinsmedicine.org/-/media/images/health/3_-wellness/womans-health/women-headaches-teaser.ashx' ">
+<br>
+
+<p id="two">Hias</p >
+<button onclick="document.getElementById('two').innerHTML ='Another'">Click</button>
+<br>
+<p id="demo">你好</p >
+<button onclick="change()">change</button>
+<button onclick="alert()">Click                                                        </button>
+<br>
+<p id="gan"></p >
+<button onclick="sum1()">Caculations</button>
+<p id='yu'></p >
+<button onclick="sum2()">Nice to meet you + your first name + your last name</button>
+<p id="question6"></p >
+<button onclick="question6()">click here to show the 20 degrees F to C</button>
+
+<script>
+alert(new Date()); 
+function change(){
+ var select = document.getElementById('demo');
+ select.style.color='blue';
+ select.style.backgroundColor='red';
+ select.style.fontFamily='Arial';
+ select.innerHTML='不好';
+ select.style.textAlign='center';
+}
+function ha(){
+ alert('')
+}
+function sum1(){
+ var a = parseFloat(prompt('first number:'));
+ var b = parseFloat(prompt('second number:'));
+document.getElementById('gan').innerHTML=a+b;
+}
+function sum2(){
+    var a = prompt('First name')
+    var b = prompt('Second name')
+    document.getElementById('yu').innerHTML='Nice to meet you'+a+b;
+}
+function question6more(f){
+    return (5/9) * (f-32)
+}
+function question6(){
+    document.getElementById("question6").innerHTML =  question6more(20);
+}
+</script>
+
+</body>
+
+</html>
