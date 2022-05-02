@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title></title>
+
+</head>
+<center><h1>JK's HW</center></h1>
+<br>
+<body>
+    <button onclick ="gender()">Morning</button>
+ <br>
+ <button onclick="time()">Time</button>
+ <br>
+ <button onclick="game()">you will play a game</button>
+ <br>
+ <button onclick="day()">workingday</button>
+    <br>
+    <button onclick="p()">Write your password</button>
+<script>
+ function gender(){
+    var b = prompt('What is your name?');
+    var a = prompt('What is your gender?("1" is male, "2" is female)');
+    
+    if(a == 1){
+        alert('Hi, Mr. '+b)
+    }
+     else if (a == 2){
+         alert('Hi, Miss. '+b)
+     }
+}
+
+
+
+
+function time(){
+     var a = new Date().getHours();
+     if(a < 12){
+      alert('Good morning!')
+     }
+     else if(a > 12 || a < 18){
+      alert('Good afternoon!')
+     }
+     else if(a > 18 || a < 24){
+      alert('Good evening!')
+     }
+
+}
+
+
+function game(){
+    var user = parseFloat(prompt('plz enter a number between 0 and 50:'));
+    var computer = Math.floor(Math.random()*51);
+    if(user > computer){
+        alert('The computer chooses '+computer+' You get it!')
+    }
+    else if(user < computer){
+        alert( 'The computer chooses '+computer+' The computer is better than you !')
+    }
+    else('Tie Game!')
+}
+
+
+
+function day(){
+ var d = new Date().getDay();
+ switch(d){
+  case 0:alert('Today is Sunday, a studying day.');
+      break;
+        case 1:alert('Today is Monday,a studing day.');
+      break;
+  case 2:alert('Today is Tuesday, a studying day.');
+      break;
+        case 3:alert('Today is Wednesday, a learning day.');
+      break;
+        case 4:alert('Today is Thursday, a learning day.');
+      break;
+        case 5:alert('Today is Friday, a learning day.');
+      break;
+  case 6:alert('Today is Saturday, a learning day.');
+      break;
+ }
+}
+
+function p(){
+ var a = prompt('write your password');
+ var a = a.toString();
+    if(a.length > 10){
+        alert('No more than 10 characters ');
+    }
+    else if(a.indexOf('!')!= -1){
+        alert('There will be no "!","?","$", and "#" in the password.');
+    }
+    else if(a.indexOf('$')!=-1){
+       alert('There will be no "!","?","$", and "#" in the password.')
+   } 
+    else if(a.indexOf('#')!=-1){
+        alert('There will be no "!","?","$", and "#" in the password.')
+    }
+    else if(a.indexOf('?')!=-1){
+        alert('There will be no "!","?","$", and "#" in the password.')
+    }
+    else if(a.indexOf('*')==0){
+        alert('The initial character can‘t be "*"')
+    }
+    else{
+        alert('You have created your password')
+    }
+}
+
+</script>
+</body>
+</html>
